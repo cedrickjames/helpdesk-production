@@ -453,8 +453,8 @@ if (isset($_POST['approveRequest'])) {
                     'allow_self_signed' => true
                 )
             );
-            $mail2->SMTPSecure = 'none';
-            $mail2->Port = 465;
+            $mail2->SMTPSecure = 'tls';
+            $mail2->Port = 587;
 
 
             //Recipients

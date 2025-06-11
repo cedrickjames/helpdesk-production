@@ -294,15 +294,9 @@ if (isset($_POST['submitTicket'])) {
                     $mail2->SMTPAuth = true;                               // Enable SMTP authentication
                     $mail2->Username = $account;
                     $mail2->Password = $accountpass;
-                    $mail2->SMTPOptions = array(
-                        'ssl' => array(
-                            'verify_peer' => false,
-                            'verify_peer_name' => false,
-                            'allow_self_signed' => true
-                        )
-                    );
-                    $mail2->SMTPSecure = 'none';
-                    $mail2->Port = 465;
+           
+                    $mail2->SMTPSecure = 'tls';
+                     $mail2->Port = 587;
 
                     //Send Email
                     $mail2->setFrom('system.notification@glory.com.ph', 'Helpdesk');

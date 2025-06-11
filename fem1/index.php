@@ -269,8 +269,8 @@ if (isset($_POST['approveRequest'])) {
                     'allow_self_signed' => true
                 )
             );
-            $mailA->SMTPSecure = 'none';
-            $mailA->Port = 465;
+            $mailA->SMTPSecure = 'tls';
+            $mailA->Port = 587;
 
             //Send Email
             // $mailA->setFrom('Helpdesk'); //eto ang mag front  notificationsys01@gmail.com

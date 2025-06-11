@@ -249,8 +249,8 @@ if (isset($_POST['submitTicket'])) {
                             'allow_self_signed' => true
                         )
                     );
-                    $mail2->SMTPSecure = 'none';
-                    $mail2->Port = 465;
+                    $mail2->SMTPSecure = 'tls';
+                    $mail2->Port = 587;
 
                     //Send Email
                     $mail2->setFrom('system.notification@glory.com.ph', 'Helpdesk');
