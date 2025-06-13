@@ -195,8 +195,8 @@ if (isset($_POST['submitTicket'])) {
             $_SESSION['finalAction'] = $_POST['requestAction'];
             $_SESSION['recommendation'] = $_POST['recommendation'];
             $_SESSION['dateFinished'] = $datenow;
-            $sql = mysqli_query($con, "INSERT INTO request (date_filled, status2, requestor, requestorUsername, email, department, request_type, request_to, request_category, request_details, assignedPersonnel, assignedPersonnelName, action, recommendation, onthespot_ticket, ticket_category, category_level, ticket_filer, actual_finish_date, admin_approved_date, ict_approval_date, first_responded_date, completed_date)
-        VALUES ('$datenow', '$status', '$requestor','$requestorIdnumber', '$requestorEmail', '$requestorDepartment', 'Technical Support', 'mis', '$ticket_category','$detailsOfRequest', '$r_personnels', '$r_personnelsName', '$action', '$recommendation', '$onthespot_ticket', '$ticket_category', '$r_cat_level', '$user_name', '$datenow', '$datenow', '$datetime', '$datetime', '$datetime')");
+            $sql = mysqli_query($con, "INSERT INTO request (date_filled, status2, requestor, requestorUsername, email, department, request_type, request_to, request_category, request_details, assignedPersonnel, assignedPersonnelName, action, recommendation, onthespot_ticket, ticket_category, category_level, ticket_filer, actual_finish_date, admin_approved_date,expectedFinishDate, ict_approval_date, first_responded_date, completed_date)
+        VALUES ('$datenow', '$status', '$requestor','$requestorIdnumber', '$requestorEmail', '$requestorDepartment', 'Technical Support', 'mis', '$ticket_category','$detailsOfRequest', '$r_personnels', '$r_personnelsName', '$action', '$recommendation', '$onthespot_ticket', '$ticket_category', '$r_cat_level', '$user_name', '$datenow', '$datenow','$datenow', '$datetime', '$datetime', '$datetime')");
         } else {
             $status = "inprogress";
             $_SESSION['status'] = 'In Progress';
