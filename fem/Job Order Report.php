@@ -51,6 +51,9 @@ if ($_SESSION['status'] == "inprogress") {
 } else if ($_SESSION['status'] == "Done") {
     $status = "Done";
 }
+else if ($_SESSION['status'] == "head") {
+    $status = "For Approval";
+}
 
 $html = '<!DOCTYPE html>
     <html lang="en">
